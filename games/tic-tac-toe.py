@@ -1,15 +1,15 @@
 class TicTacToe:
     def __init__(self):
         self.board = [" "]*9
-        self.players = {"first_player": {"name": "X", "score": 0}, 
-                        "second_player":  {"name": "O", "score": 0}}
+        self.players = {"first_player": {"name": "1st", "sign": "X", "score": 0},
+                        "second_player":  {"name": "2nd", "sign": "O","score": 0}}
     
     def update_player_info(self, first_player, second_player):
         if first_player:
             self.players["first_player"]["name"] = first_player
         if second_player:
             self.players["second_player"]["name"] = second_player
-        self.current_player = self.players["first_player"]["name"]
+        self.current_player = self.players["first_player"]
 
     def display_board(self):
         print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
@@ -25,12 +25,12 @@ class TicTacToe:
     
     def get_move(self):
         while True:
-            move = input(f"{self.current_player}'s turn. Enter a number (1-9) to place your mark: ")
+            move = input(f"{self.current_player['name']}'s turn. Enter a number (1-9) to place your mark: ")
             if move.isdigit() and int(move) in range(1, 10) and self.board[int(move)-1] == " ":
                 return int(move)-1
     
     def make_move(self, move):
-        self.board[move] = self.current_player
+        self.board[move] = self.current_player['sign']
     
     def check_win(self):
         for i in range(3):
@@ -48,14 +48,14 @@ class TicTacToe:
         return " " not in self.board
     
     def switch_player(self):
-        if self.current_player == self.players["first_player"]["name"]:
-            self.current_player = self.players["second_player"]["name"]
+        if self.current_player['name'] == self.players["first_player"]["name"]:
+            self.current_player = self.players["second_player"]
         else:
-            self.current_player = self.players["first_player"]["name"]
+            self.current_player = self.players["first_player"]
     
-    def update_scores(self):
-        if self.check_win():
-            self.players[self.current_player] += 1
+    # def update_scores(self):
+    #     if self.check_win():
+    #         self.players[self.current_player['name']] += 1
     
     def play(self):
         print("Welcome to Tic Tac Toe!")
@@ -74,8 +74,8 @@ class TicTacToe:
             self.make_move(move)
             if self.check_win():
                 self.display_board()
-                print(f"{self.current_player} wins!")
-                self.update_scores()
+                print(f"{self.current_player['name']} wins!")
+                # self.update_scores()
                 break
             elif self.check_tie():
                 self.display_board()
