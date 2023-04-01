@@ -1,9 +1,20 @@
 class TicTacToe:
     def __init__(self):
         self.board = [" "]*9
-        self.players = {"X": 0, "O": 0}
+        self.players = {}
         self.current_player = "X"
     
+    def update_player_info(self, first_player, second_player):
+        if first_player:
+            self.players[first_player] = 0
+        else:
+            self.players["X"] = 0
+
+        if second_player:
+            self.players[second_player] = 0
+        else:
+            self.players["0"] = 0
+
     def display_board(self):
         print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
         print("---+---+---")
@@ -52,6 +63,14 @@ class TicTacToe:
     
     def play(self):
         print("Welcome to Tic Tac Toe!")
+
+        # Collect info
+        print("Collecting players information...")
+        first_player = input(f"Provide first player name: ")
+        second_player = input(f"Provide second player name: ")
+        self.update_player_info(first_player, second_player)
+
+        # Start the game
         while True:
             self.display_scores()
             self.display_board()
