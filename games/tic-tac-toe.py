@@ -4,11 +4,11 @@ class TicTacToe:
         self.players = {"first_player": {"name": "1st", "sign": "X", "score": 0},
                         "second_player":  {"name": "2nd", "sign": "O","score": 0}}
     
-    def update_player_info(self, first_player, second_player):
-        if first_player:
-            self.players["first_player"]["name"] = first_player
-        if second_player:
-            self.players["second_player"]["name"] = second_player
+    def update_player_info(self, first_player_name, second_player_name):
+        if first_player_name:
+            self.players["first_player"]["name"] = first_player_name
+        if second_player_name:
+            self.players["second_player"]["name"] = second_player_name
         self.current_player = self.players["first_player"]
 
     def display_board(self):
@@ -62,9 +62,9 @@ class TicTacToe:
 
         # Collect info
         print("Collecting players information...")
-        first_player = input(f"Provide first player name: ")
-        second_player = input(f"Provide second player name: ")
-        self.update_player_info(first_player, second_player)
+        first_player_name = input(f"Provide first player name: ")
+        second_player_name = input(f"Provide second player name: ")
+        self.update_player_info(first_player_name, second_player_name)
 
         # Start the game
         while True:
