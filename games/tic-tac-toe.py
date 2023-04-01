@@ -1,19 +1,15 @@
 class TicTacToe:
     def __init__(self):
         self.board = [" "]*9
-        self.players = {}
-        self.current_player = "X"
+        self.players = {"first_player": {"name": "X", "score": 0}, 
+                        "second_player":  {"name": "O", "score": 0}}
     
     def update_player_info(self, first_player, second_player):
         if first_player:
-            self.players[first_player] = 0
-        else:
-            self.players["X"] = 0
-
+            self.players["first_player"]["name"] = first_player
         if second_player:
-            self.players[second_player] = 0
-        else:
-            self.players["0"] = 0
+            self.players["second_player"]["name"] = second_player
+        self.current_player = self.players["first_player"]["name"]
 
     def display_board(self):
         print(f" {self.board[0]} | {self.board[1]} | {self.board[2]} ")
@@ -52,10 +48,10 @@ class TicTacToe:
         return " " not in self.board
     
     def switch_player(self):
-        if self.current_player == "X":
-            self.current_player = "O"
+        if self.current_player == self.players["first_player"]["name"]:
+            self.current_player = self.players["second_player"]["name"]
         else:
-            self.current_player = "X"
+            self.current_player = self.players["first_player"]["name"]
     
     def update_scores(self):
         if self.check_win():
