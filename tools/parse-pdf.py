@@ -23,11 +23,12 @@ for page_num in range(len(pdf_reader.pages)):
     page = pdf_reader.pages[page_num]
     text = page.extract_text()
     
+    print("Working on page_num: ", page_num)
+    text = text.split('\n')[0]
+    # print("text: ", text)
     # print(text)
     # Tokenize the text into sentences
     sentences = sent_tokenize(text)
-    print("Working on page_num: ", page_num)
-    # print("sentence: ", sentences)
     # print("sentence len: ", len(sentences))
 
     # Check first sentence in the page
