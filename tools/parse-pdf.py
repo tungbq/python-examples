@@ -2,6 +2,7 @@ import PyPDF2
 import nltk
 # nltk.download('punkt')
 from nltk.tokenize import word_tokenize, sent_tokenize
+import time
 
 
 PDF_PATH="C:\\Users\\ASUS\\OneDrive\\BOOK\\AWS-SAA\\AWS Certified Solutions Architect Slides v13 Parse.pdf"
@@ -41,10 +42,12 @@ for page_num in range(len(pdf_reader.pages)):
 
     summary += first_sentence_title + '\n'
 
+# Get the current time in epoch format
+epoch_time = int(time.time())
 # Print the summary
 print(summary)
 print("Parsing completed! Writing output to the file")
-OUT_PUT_FILE="../output/summary.txt"
+OUT_PUT_FILE = f"../output/summary_{epoch_time}.txt"
 # Open the file in write mode
 with open(OUT_PUT_FILE, 'a', encoding="utf-8") as file:
     # Write the string to the file
