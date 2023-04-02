@@ -1,0 +1,864 @@
+AWS Certified Solutions Architect Associate CourseSAA-C03
+Welcome!
+My SAA-C03 certification: 96.1%
+About me
+What’s AWS?
+What we’ll learn in this course (and more!)
+Udemy Tips
+Getting started with AWS
+AWS Cloud History2002: Internally launched2003: Amazon infrastructure is one of their core strength.
+AWS Cloud Number Facts
+AWS Cloud Use Cases
+AWS Global Infrastructure
+AWS Regions
+How to choose an AWS Region?
+AWS Availability Zones
+AWS Points of Presence (Edge Locations)
+To u r  o f  th e  AW S  Co n s o l e
+
+
+IAM Section
+IAM: Users & Groups
+IAM: Permissions
+IAM Policies inheritance
+IAM –Password Policy
+Multi Factor Authentication -MFA
+MFA devices options in AWSVirtual MFA device
+MFA devices options in AWS
+How can users access AWS ?
+Example (Fake) Access Keys
+What’s the AWS CLI?
+IAM Roles for Services
+IAM Security T ools
+IAM Guidelines & Best Practices
+IAM Section –Summary 
+
+
+EC2 Basics
+Amazon EC2
+EC2 sizing & configuration options
+EC2 User Data
+Hands-On:Launching an EC2 Instance running Linux
+EC2 Instance Types -Overview
+EC2 Instance Types–General Purpose
+EC2 Instance Types–Compute Optimized
+EC2 Instance Types–Memory Optimized
+EC2 Instance Types–Storage Optimized
+EC2 Instance Types: exampleInstancevCPUMem (GiB)StorageNetwork PerformanceEBS Bandwidth (Mbps)t2.micro11EBS-OnlyLow to Moderatet2.xlarge416EBS-OnlyModeratec5d.4xlarge16321 x 400 NVMe SSDUp to 10 Gbps4,750r5.16xlarge64512EBS Only20 Gbps13,600m5.8xlarge32128EBS Only10 Gbps6,800t2.micro is part of the AWS free tier (up to 750 hours per month)Great website:https://instances.vantage.sh
+Introduction to Security Groups
+Security GroupsDeeper Dive
+Security GroupsDiagram
+Security GroupsGood to know
+Referencing other security groupsDiagram
+Classic Ports to know
+SSH Summary TableMacLinuxWindows < 10Windows >= 10SSHPuttyEC2 Instance Connect
+Which Lectures to watch
+SSH troubleshooting
+How to SSH into your EC2 InstanceLinux / Mac OS X
+How to SSH into your EC2 InstanceWindows
+EC2 Instance Connect
+EC2 Instances Purchasing Options
+EC2 On Demand
+EC2 Reserved Instances
+EC2 Savings Plans
+EC2 Spot Instances
+EC2 Dedicated Hosts
+EC2 Dedicated Instances
+EC2 Capacity Reservations
+Which purchasing option is right for me?
+Price ComparisonExample –m4.large –us-east-1Price TypePrice (per hour)On-Demand $0.10 Spot Instance (Spot Price)$0.038 -$0.039 (up to 61% off)Reserved Instance (1 year)$0.062 (No Upfront) -$0.058 (All Upfront)Reserved Instance (3 years)$0.043 (No Upfront) -$0.037 (All Upfront)EC2 Savings Plan (1 year)$0.062 (No Upfront) -$0.058 (All Upfront)Reserved ConvertibleInstance (1 year)$0.071 (No Upfront) -$0.066 (All Upfront)Dedicated HostOn-Demand PriceDedicated Host ReservationUp to 70% offCapacity ReservationsOn-Demand Price
+EC2 Spot Instance Requests
+EC2 Spot Instances Pricing
+How to terminate Spot Instances?
+Spot Fleets
+EC2 Section –Summary 
+
+
+EC2 –Associate
+Private vs Public IP (IPv4)
+Company BPrivate Network192.168.0.1/22Company APrivate Network192.168.0.1/22Private vs Public IP (IPv4)Example
+Private vs Public IP (IPv4)Fundamental Differences
+Elastic IPs
+Elastic IP
+Private vs Public IP (IPv4)In AWS EC2 –Hands On
+Placement Groups
+Same RackSame AZPlacement GroupsCluster
+Us-east-1aHardware 1Placement GroupsSpread
+Placements GroupsPartition
+Elastic Network Interfaces (ENI)
+EC2 Hibernate
+EC2 Hibernate –Good to know
+EC2 Instance Storage Section
+What’s an EBS Volume?
+EBS Volume
+US-EAST-1BUS-EAST-1AEBS Volume -Example
+EBS –Delete on Termination attribute
+EBS Snapshots
+EBS Snapshots Features
+AMI Overview
+AMI Process (from an EC2 instance)
+EC2 Instance Store
+Local EC2 Instance Store
+EBS Volume Types
+EBS Volume Types Use casesGeneral Purpose SSD
+EBS Volume Types Use casesProvisioned IOPS (PIOPS) SSD
+EBS Volume Types Use casesHard Disk Drives (HDD)
+EBS –Volume Types Summar y
+EBS Multi-Attach –io1/io2 family
+EBS Encryption
+Encryption: encrypt an unencrypted EBS volume
+Amazon EFS –Elastic File System
+Amazon EFS –Elastic File System
+EFS –Performance & Storage Classes
+EFS –Storage Classes
+EBS vs EFS –Elastic Block Storage
+EBS vs EFS –Elastic File System
+AWS Fundamentals –Part IILoad Balancing, Auto Scaling Groups and EBS Volumes
+
+
+Scalability & High Availability
+Ver tical Scalability
+Horizontal Scalability
+second building in San Franciscofirst building in New YorkHigh Availability
+High Availability & Scalability For EC2
+What is load balancing?
+Why use a load balancer?
+Why use an Elastic Load Balancer?
+Health Checks
+Types of load balancer on AWS
+Load Balancer Security GroupsUsersHTTPS / HTTPFrom anywhereHTTP Restricted to Load balancerLOAD BALANCER
+Classic Load Balancers (v1)
+Application Load Balancer (v2)
+Application Load Balancer (v2)
+Target Group for UsersapplicationApplication Load Balancer (v2)HTTP Based Traffic
+Application Load Balancer (v2)Tar get Groups
+Target Group 1AWS –EC2 basedApplication Load Balancer (v2)Query Strings/Parameters Routing
+Application Load Balancer (v2)Good to Know
+Network Load Balancer (v2)
+Network Load Balancer (v2)TCP (Layer 4) Based Traffic
+Network Load Balancer –Tar get Groups
+Gateway Load Balancer
+GatewayLoad Balancer –Tar get Groups
+Sticky Sessions (Session Affinity)
+Sticky Sessions –Cookie Names
+Cross-Zone Load Balancing
+Cross-Zone Load Balancing
+SSL/TLS -Basics 
+Load Balancer -SSL Certificates
+SSL –Server Name Indication (SNI)
+Elastic Load Balancers –SSL Certificates
+Connection Draining
+What’s an Auto Scaling Group?
+Auto Scaling Group in AWS
+Auto Scaling Group in AWS With Load BalancerElastic Load Balancer
+Auto Scaling Group Attributes
+Auto Scaling -CloudWatch Alarms & Scaling
+Auto Scaling Groups –Dynamic Scaling Policies 
+Auto Scaling Groups –Predictive Scaling
+Good metrics to scale on
+Auto Scaling Groups -Scaling Cooldowns
+
+
+RDS, Aurora & ElastiCache
+Amazon RDS Overview 
+Advantage over using RDS versus deploying DB on EC2
+RDS –Storage Auto Scaling
+RDS Read Replicas for read scalability
+RDS Read Replicas –Use Cases
+RDS Read Replicas –Network Cost
+RDS Multi AZ (Disaster Recovery)
+RDS –From Single-AZ to Multi-AZ
+RDS Custom
+Amazon Aurora
+Aurora High Availability and Read Scaling
+Auto ScalingAurora DB Cluster
+Features of Aurora
+Replicas Auto ScalingAurora Replicas -Auto Scaling
+Aurora –Custom Endpoints
+Aurora Serverless
+Aurora Multi-Master
+
+
+Aurora Machine Learning
+RDS Backups
+Aurora Backups
+RDS & Aurora Restore options
+Aurora Database Cloning
+RDS & Aurora Security
+Amazon RDS Proxy
+Amazon ElastiCacheOverview
+ElastiCache Solution Architecture -DB Cache
+ElastiCache Solution Architecture –User Session Store
+ElastiCache –Redisvs MemcachedREDIS 
+ElastiCache–Cache Security
+Patterns for ElastiCache
+ElastiCache –Redis Use Case
+
+
+Route 53 Section
+What is DNS?
+DNS Terminologieshttp://api.www.example.com.
+Amazon Route 53
+Route 53 –Records
+Route 53 –Record Types
+Route 53 –Hosted Zones
+Route 53 –Public vs.
+Route 53 –Records TTL (Time T o Live)
+CNAME vs Alias
+Route 53 –Alias Records
+Route 53 –Alias Records Targets
+Route 53 –Routing Policies
+Routing Policies –Simple
+Routing Policies –Weighted
+Routing Policies –Latency-based
+Route 53 –Health Checks
+eu-west-1Health Checker(us-east-1)Health Checks –Monitor an Endpoint
+Amazon Route 53Route 53 –Calculated Health Checks
+Private subnetHealth Checks –Private Hosted Zones
+Routing Policies –Failover (Active-Passive)EC2 Instance(Primary)Health Check(mandatory)Failover
+Routing Policies –Geolocation
+Routing Policies –Geoproximity
+Routing Policies –Geoproximity
+Routing Policies –Geoproximity
+Routing Policies –Multi-Value
+Domain Registar vs. DNS Service
+3rdParty Registrar with Amazon Route 53
+
+
+Classic Solutions Architecture
+Section Introduction
+Stateless Web App: WhatIsTheTime.com
+Stateless web app: What time is it?Starting simple
+
+Stateless web app: What time is it?Scaling horizontally
+Stateless web app: What time is it?Scaling horizontallyWhat time is it?5:30 pm!What time is it?6:30 pm!What time is it?7:30 pm!
+Stateless web app: What time is it?Scaling horizontally, adding and removing instancesWhat time is it?5:30 pm!What time is it?6:30 pm!What time is it?7:30 pm!
+Stateless web app: What time is it?Scaling horizontally, with a load balancerWhat time is it?
+Stateless web app: What time is it?Scaling horizontally, with an auto-scaling groupWhat time is it?
+Stateless web app: What time is it?Making our app multi-AZWhat time is it?
+Minimum 2 AZ => Let’s reserve capacity
+In this lecture we’ve discussed…
+Stateful Web App: MyClothes.com
+Stateful Web App: MyClothes.com
+Stateful Web App: MyClothes.comIntroduce Stickiness (Session Affinity)
+Stateful Web App: MyClothes.comIntroduce User Cookies
+Stateful Web App: MyClothes.comIntroduce Server Session
+Stateful Web App: MyClothes.comStoring User Data in a database
+Stateful Web App: MyClothes.comScaling Reads
+Stateful Web App: MyClothes.comScaling Reads (Alternative) –Lazy Loading
+Stateful Web App: MyClothes.comMulti AZ –Survive disasters
+Stateful Web App: MyClothes.comSecurity Groups
+In this lecture we’ve discussed…3-tier architectures for web applications
+Stateful Web App: MyWordPress.com
+Stateful Web App: MyWordPress.comRDS layer
+Stateful Web App: MyWordPress.comScaling with Aurora: Multi AZ & Read Replicas
+Stateful Web App: MyWordPress.comStoring images with EBS
+Stateful Web App: MyWordPress.comStoring images with EBS
+Stateful Web App: MyWordPress.comStoring images with EFS
+In this lecture we’ve discussed…
+Instantiating Applications quickly
+Instantiating Applications quickly
+Typical architecture: Web App 3-tier
+Developer problems on AWS
+Elastic Beanstalk –Overview
+Elastic Beanstalk –Components
+Elastic Beanstalk –Supported Platforms
+Web Ser ver Tier vs. Worker Tier
+Elastic Beanstalk Deployment ModesSingle InstanceGreat for devHigh Availability with Load BalancerGreat for prodAvailability Zone 1Auto Scaling GroupAvailability Zone 2
+
+
+Amazon S3 Section
+Section introduction
+Amazon S3 Use cases
+Amazon S3 -Buckets
+Amazon S3 -Objects
+Amazon S3 –Objects (cont.
+Amazon S3 –Security
+S3 Bucket Policies
+Example: Public Access -Use Bucket Policy
+Example: User Access to S3 –IAM permissions
+Example: EC2 instance access -Use IAM Roles
+Advanced: Cross-Account Access –Use Bucket Policy
+Bucket settings for Block Public Access
+Amazon S3 –Static Website Hosting
+Amazon S3 -Versioning
+Amazon S3 –Replication (CRR & SRR)
+Amazon S3 –Replication (Notes)
+S3 Storage Classes
+S3 Durability and Availability
+S3 Standard –General Purpose
+S3 Storage Classes –Infrequent Access
+Amazon S3 Glacier Storage Classes
+S3 Intelligent-Tiering
+S3 Storage Classes Comparison
+S3 Storage Classes –Price ComparisonExample: us-east-1
+
+
+Advanced S3
+Amazon S3 –Moving between Storage Classes
+Amazon S3 –Lifecycle Rules
+Amazon S3 –Lifecycle Rules (Scenario 1)
+Amazon S3 –Lifecycle Rules (Scenario 2)
+Amazon S3 Analytics –Storage Class Analysis
+S3 –Requester Pays
+S3 Event Notifications
+S3 Event Notifications with Amazon EventBridge
+S3 –Baseline Performance
+S3 Performance
+S3 Performance –S3 Byte-Range Fetches
+S3 Select & Glacier Select
+S3 Batch Operations
+Amazon S3 Security
+Amazon S3 –Object Encryption
+Amazon S3 Encryption –SSE-S3
+Amazon S3 Encryption –SSE-KMS
+SSE-KMS Limitation
+Amazon S3 Encryption –SSE-C
+Amazon S3 Encryption –Client-Side Encryption
+Amazon S3 –Encryption in transit (SSL/TLS)
+Amazon S3 –Default Encryption vs. Bucket Policies
+What is CORS?
+What is CORS?
+Amazon S3 –CORS 
+Amazon S3 –MFA Delete
+S3 Access Logs
+S3 Access Logs: Warning
+Amazon S3 –Pre-Signed URLs
+S3 Glacier Vault Lock
+S3 Object Lock (versioning must be enabled)
+S3 –Access Points
+S3 Object Lambda
+
+
+Global Infrastructure
+Amazon CloudFront
+CloudFront –Origins 
+CloudFront at a high level
+CloudFront –S3 as an Origin
+CloudFront vs S3 Cross Region Replication
+CloudFront –ALB or EC2 as an originhttp://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips
+CloudFront Geo Restriction
+CloudFront -Pricing
+CloudFront –Price Classes
+CloudFront -Price Class
+CloudFront –Cache Invalidations
+Global users for our application
+Unicast IP vs Anycast IP
+AWS Global Accelerator
+AWS Global Accelerator
+AWS Global Accelerator vs CloudFront
+
+
+Advanced Storage on AWS
+AWS Snow Family
+Data Migrations with AWS Snow FamilyTime to Transfer100 Mbps1Gbps10Gbps10 TB12 days30 hours3 hours100 TB124 days12 days30 hours1 PB3 years124 days12 daysChallenges:
+Diagrams
+Snowball Edge (for data transfers)
+AWS Snowcone& Snowcone SSD
+AWS Snowmobile
+AWS Snow Family for Data Migrations
+Snow Family –Usage Process1.Request Snowball devices from the AWS console for delivery2.Install the snowball client / AWS OpsHubon your servers3.Connect the snowball to your servers and copy files using the client4.Ship back the device when you’re done (goes to the right AWS facility)5.Data will be loaded into an S3 bucket6.Snowball is completely wiped
+What is Edge Computing?
+Snow Family –Edge Computing 
+AWS OpsHub
+Solution Architecture: Snowball into Glacier
+Amazon FSx –Overview 
+Amazon FSxfor Windows (File Server)
+Amazon FSxfor Lustre
+FSx Lustre -File System Deployment Options
+Amazon FSx for NetApp ONTAP
+Amazon FSx for OpenZFS
+Hybrid Cloud for Storage
+AWS Storage Cloud Native OptionsBlock
+AWS Storage Gateway
+Amazon S3 File Gateway
+Amazon FSxFile Gateway
+Volume Gateway
+Tape Gateway
+Storage Gateway –Hardware appliance
+AWS Storage Gateway
+AWS Transfer Family
+AWS Transfer Family
+AWS DataSync
+AWS DataSyncNFS / SMB to AWS (S3, EFS, FSx…)
+AWS DataSyncTransfer between AWS storage ser vices
+Storage Comparison
+
+
+AWS Integration & MessagingSQS, SNS & Kinesis
+Section Introduction
+Section Introduction
+Amazon SQSWhat’s a queue?ProducerProducerProducerSQS QueueConsumerConsumerConsumerConsumerSend messagesPoll messages
+Amazon SQS –Standard Queue
+SQS –Producing Messages
+SQS –Consuming Messages
+SQS –Multiple EC2 Instances ConsumersSQS Queue
+SQS with Auto Scaling Group (ASG)SQS Queue
+SQS to decouplebetween application tiers
+Amazon SQS -Security
+SQS –Message Visibility Timeout
+SQS –Message Visibility Timeout
+Amazon SQS -Long Polling
+Amazon SQS –FIFO Queue
+SQS with Auto Scaling Group (ASG)SQS Queue
+If the load is too big, some transactions may be lost
+SQS as a buffer to database writes
+SQS to decouplebetween application tiers
+Amazon SNS
+Amazon SNS
+SNS integrates with a lot of AWS services
+Amazon SNS –How to publish
+Amazon SNS –Security 
+SNS + SQS: Fan Out
+Application: S3 Events to multiple queues
+Application: SNS to Amazon S3 through Kinesis Data Firehose
+Amazon SNS –FIFO T opic
+SNS FIFO + SQS FIFO: Fan Out
+SNS –Message Filtering
+Kinesis Overview
+Kinesis Data Streams
+Kinesis Data Streams
+Kinesis Data Streams –Capacity Modes
+Kinesis Data Streams Security
+Kinesis Data FirehoseAWS Destinations
+Kinesis Data Firehose
+Kinesis Data Streams vs Firehose
+Ordering data into Kinesis
+Ordering data into SQS
+Kinesis vs SQS ordering
+SQS vs SNS vs KinesisSQS:
+Amazon MQ
+Amazon MQ –High Availability
+
+
+Container Section
+What is Docker?
+Docker on an OSServer (e.g., EC2 instance)
+Where are Docker images stored?
+Docker vs.
+Getting Started with Docker
+Docker Containers Management on AWS
+Amazon ECS -EC2 Launch Type
+Amazon ECS –FargateLaunch Type
+Amazon ECS –IAM Roles for ECS
+Amazon ECS –Load Balancer Integrations
+Amazon ECS –Data Volumes(EFS)
+ECS Service Auto Scaling
+EC2 Launch Type –Auto Scaling EC2 Instances
+ECS Scaling –Service CPU Usage Example
+ECS tasks invoked by Event Bridge
+ECS tasks invoked by Event Bridge Schedule
+ECS –SQS Queue Example
+Amazon ECR
+Amazon EKS Overview
+Private subnet 3Private subnet 1Private subnet 2Amazon EKS -Diagram
+Amazon EKS –Node Types
+Amazon EKS –Data Volumes 
+AWS App Runner
+Serverless Overview
+What’s serverless?
+Serverless in AWS 
+Why AWS Lambda
+Benefits of AWS Lambda
+AWS Lambda language support
+AWS Lambda IntegrationsMain ones
+Example: Serverless Thumbnail creation
+Example: Serverless CRON Job
+AWS Lambda Pricing: example
+AWS Lambda Limits to Know -per region
+Customization At The Edge
+CloudFront Functions & Lambda@EdgeUse Cases
+CloudFront Functions
+Lambda@Edge
+CloudFront Functions vs. Lambda@EdgeCloudFront FunctionsLambda@EdgeRuntime SupportJavaScriptNode.js, Python# of RequestsMillionsof requests per secondThousandsof requests per secondCloudFront Triggers-Viewer Request/Response-Viewer Request/Response-Origin Request/ResponseMax.
+CloudFront Functions vs. Lambda@Edge -Use CasesCloudFront Functions
+Lambda by default
+Private subnetLambda in VPC
+Lambda with RDS Proxy
+Amazon DynamoDB 
+DynamoDB -Basics
+DynamoDB –Table example
+DynamoDB –Read/Write Capacity Modes
+DynamoDB Accelerator (DAX)
+DynamoDB Accelerator (DAX) vs. ElastiCache
+DynamoDB –Stream Processing
+DynamoDB Streams
+DynamoDB Global Tables
+DynamoDB –Time T o Live (TTL)
+DynamoDB –Backups for disaster recovery
+DynamoDB –Integration with Amazon S3
+Example: Building a Serverless API
+AWS API Gateway
+API Gateway –Integrations High Level
+API Gateway –AWS Service IntegrationKinesis Data Streams example
+API Gateway -Endpoint Types 
+API Gateway –Security 
+AWS Step Functions
+Serverless Architectures
+Mobile application: MyT odoList
+Mobile app: REST API layer
+Mobile app: giving users access to S3
+Mobile app: high read throughput, static data
+Mobile app: caching at the API Gateway
+In this lecture
+Serverless hosted website: MyBlog.com
+Serving static content, globallyAmazon CloudFrontGlobal distribution
+Serving static content, globally, securelyAmazon CloudFrontGlobal distribution
+Adding a public serverless REST APIAmazon CloudFrontGlobal distribution
+Leveraging DynamoDB Global TablesAmazon CloudFrontGlobal distribution
+User Welcome email flowAmazon CloudFrontGlobal distribution
+Thumbnail Generation flowAmazon CloudFrontGlobal distribution
+AWS Hosted Website Summary
+Micro Services architecture
+Micro Services Environment
+Discussions on Micro Services
+Software updates offloading
+Our application current state
+Easy way to fix things!
+Why CloudFront?
+Databases
+Choosing the Right Database
+Database Types
+Amazon RDS –Summary 
+
+Amazon ElastiCache–Summary 
+Amazon DynamoDB –Summary 
+Amazon S3 –Summary
+DocumentDB
+Amazon Neptune
+Amazon Keyspaces(for Apache Cassandra)
+Amazon QLDB
+Amazon Timestream
+Amazon Timestream –Architecture
+Data & Analytics
+Amazon Athena
+Amazon Athena –Performance Improvement
+Amazon Athena –Federated Query
+Redshift Overview
+Redshift Cluster
+Redshift –Snapshots & DR
+Loading data into Redshift: Large inserts are MUCH betterAmazon Kinesis Data FirehoseS3 using COPY command
+Redshift Spectrum
+Amazon OpenSearch Service
+OpenSearch patternsDynamoDB
+OpenSearch patternsCloudWatch LogsCloudWatch LogsSubscription FilterLambda Function(managed by AWS)
+OpenSearch patternsKinesis Data Streams & Kinesis Data Firehose
+Amazon EMR
+Amazon EMR –Node types & purchasing
+Amazon QuickSight
+QuickSightIntegrations
+QuickSight –Dashboard & Analysis
+AWS Glue
+AWS Glue –Convert data into Parquet format
+Glue Data Catalog: catalog of datasets
+Glue –things to know at a high-level
+AWS Lake Formation
+AWS Lake Formation
+AWS Lake FormationCentralized Permissions Example
+Kinesis Data Analytics for SQL applications
+Kinesis Data Analytics (SQL application)
+Kinesis Data Analytics for Apache Flink
+Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+Apache Kafka at a high level
+Kinesis Data Streams vs. Amazon MSK
+Amazon MSK Consumers
+Big Data Ingestion Pipeline
+Big Data Ingestion Pipeline
+Big Data Ingestion Pipeline discussion
+Machine Learning
+Amazon Rekognition
+Amazon Rekognition –Content Moderation
+Amazon Transcribe
+Amazon Polly
+Amazon Polly –Lexicon & SSML
+Amazon Translate
+Amazon Lex & Connect
+Amazon Comprehend 
+Amazon Comprehend Medical
+Amazon SageMaker
+Amazon Forecast
+Amazon Kendra
+Amazon Personalize
+AWS Machine Learning -Summary
+
+
+AWS Monitoring, Audit and PerformanceCloudWatch, CloudTrail & AWS Config
+Amazon CloudWatch Metrics
+CloudWatch Metric Streams
+CloudWatch Logs
+CloudWatch Logs -Sources
+CloudWatch Logs Metric Filter & Insights
+CloudWatch Logs –S3 Export
+CloudWatch Logs SubscriptionsLambda Function(managed by AWS)
+CloudWatch Logs AggregationMulti-Account & Multi Region
+CloudWatch Logs for EC2
+CloudWatch Logs Agent & Unified Agent
+CloudWatch Unified Agent –Metrics 
+CloudWatch Alarms
+CloudWatch Alarm Targets
+CloudWatch Alarms –Composite Alarms
+EC2 Instance Recovery
+CloudWatch Alarm: good to know
+Amazon EventBridge(formerly CloudWatch Events)
+Amazon EventBridgeRules
+Amazon EventBridge
+Amazon EventBridge–Schema Registry
+Amazon EventBridge –Resource-based Policy
+CloudWatch Container Insights
+CloudWatch Lambda Insights
+CloudWatch Contributor Insights
+CloudWatch Application Insights
+CloudWatch Insights and Operational Visibility
+AWS CloudTrail
+CloudTrail Diagram
+CloudTrail Events
+CloudTrail Insights
+CloudTrail Events Retention
+Amazon EventBridge –Intercept API Calls
+AWS Config
+Config Rules
+AWS Config Resource
+Config Rules –Remediations
+Config Rules –Notifications 
+CloudWatch vs CloudTrail vs Config
+For an Elastic Load Balancer
+Advanced Identity in AWS
+Organizational Units (OU) -ExamplesBusiness Unit
+AWS Organizations
+AWS OrganizationsRoot Organizational Unit (OU)
+AWS Organizations
+SCP HierarchyRoot OU
+SCP ExamplesBlocklist and Allowliststrategies
+IAM Conditionsaws:SourceIprestrict the client IP fromwhich the API calls are being made
+IAM Conditionsec2:ResourceTagrestrict based on tagsaws:MultiFactorAuthPresentto force MFA
+
+Resource Policies & aws:PrincipalOrgID
+IAM Roles vs Resource Based Policies
+IAM Roles vs Resource-Based Policies
+Amazon EventBridge –Security 
+IAM Permission Boundaries
+IAM Permission Boundaries
+IAM Policy Evaluation Logic
+Example IAM Policy
+Amazon Cognito
+Cognito User Pools (CUP) –User Features
+Cognito User Pools (CUP) -Integrations
+Cognito Identity Pools (Federated Identities)
+Cognito Identity Pools –Diagram
+Cognito Identity PoolsRow Level Security in DynamoDB
+AWS IAM Identity Center(successor to AWS Single Sign-On)
+AWS IAM Identity Center –Login Flow
+AWS IAM Identity Center
+IAM Identity CenterAWS Organization
+AWS IAM Identity CenterFine-grained Permissions and Assignments
+What is Microsoft Active Directory (AD)?
+AWS Directory Services
+IAM Identity Center –Active Directory Setup
+AWS Control Tower
+AWS Control Tower –Guardrails
+AWS Security & EncryptionKMS, Encryption SDK, SSM Parameter Store
+Why encryption?Encryption in flight(SSL)
+Why encryption?Server side encryption at rest
+Why encryption?Client side encryption
+AWS KMS (Key Management Service)
+KMS Keys Types
+AWS KMS (Key Management Service)
+Copying Snapshots across regions
+KMS Key Policies
+Copying Snapshots across accounts1.Create a Snapshot, encrypted with your own KMS Key (Customer Managed Key)2.Attach a KMS Key Policy to authorize cross-account access3.Share the encrypted snapshot4.
+KMS Multi-Region KeysAWS KMS
+KMS Multi-Region Keys
+DynamoDB Global Tables and KMS Multi-Region Keys Client-Side encryption
+Global Aurora and KMS Multi-Region Keys Client-Side encryption
+S3 Replication Encryption Considerations
+AMI Sharing Process Encrypted via KMS1.AMI in Source Account is encrypted with KMS Key from Source Account2.Must modify the image attribute to add a Launch Permission which corresponds to the specified target AWS account3.Must share the KMS Keys used to encrypted the snapshot the AMI references with the target account / IAM Role4.The IAM Role/User in the target account must have the permissions to DescribeKey, ReEncrypted, CreateGrant, Decrypt5.When launching an EC2 instance from the AMI, optionally the target account can specify a new KMS key in its own account to re-encrypt the volumes
+SSM Parameter Store
+SSM Parameter Store Hierarchy
+Standard and advanced parameter tiersStandardAdvancedTotal number of parameters allowed(per AWS account and Region)10,000100,000Maximum size of a parameter value4 KB8 KBParameter policies availableNoYesCostNo additional chargeCharges applyStorage PricingFree$0.05 per advanced parameter per month
+Parameters Policies (for advanced parameters)
+AWS Secrets Manager
+AWS Secrets Manager –Multi-Region Secrets
+AWS Certificate Manager (ACM) 
+ACM –Requesting Public Certificates1.List domain names to be included in the certificate
+ACM –Importing Public Certificates
+ACM –Integration with ALB
+API Gateway -Endpoint Types 
+ACM –Integration with API Gateway
+AWS WAF –Web Application Firewall
+AWS WAF –Web Application Firewall
+WAF –Fixed IP while using WAF with a Load Balancer
+AWS Shield: protect from DDoS attack
+AWS Firewall Manager
+WAF vs.Firewall Manager vs.Shield
+AWS Best Practices for DDoS ResiliencyEdge Location Mitigation (BP1, BP3)
+AWS Best Practices for DDoS ResiliencyBest praticesfor DDoS mitigation
+AWS Best Practices for DDoS ResiliencyApplication Layer Defense
+AWS Best Practices for DDoS ResiliencyAttack surface reduction
+Amazon GuardDuty
+Amazon GuardDuty
+
+What does AmazonInspector evaluate?
+AWS Macie
+Virtual Private Cloud (VPC)
+VPC Components Diagram
+Understanding CIDR –IPv4
+Understanding CIDR –IPv4
+Understanding CIDR –Subnet Mask
+Understanding CIDR –Little Exercise
+Public vs.
+Default VPC Walkthrough
+VPC in AWS –IPv4
+State of Hands-on
+Adding Subnets
+VPC –Subnet (IPv4)
+Internet Gateway (IGW)
+Adding Internet Gateway
+Editing Route Tables
+Bastion Hosts
+NAT Instance (outdated, but still at the exam)
+NAT Instance
+NAT Instance –Comments 
+NAT Gateway
+NAT Gateway
+NAT Gateway with High Availability
+NAT Gateway vs. NAT InstanceNAT GatewayNAT InstanceAvailabilityHighly available within AZ (create in another AZ)Use a script to manage failover between instancesBandwidthUp to 45 GbpsDepends on EC2 instance typeMaintenanceManaged by AWSManaged by you (e.g., software, OS patches, …)CostPer hour & amount of data transferred Per hour, EC2 instance type and size, + network $Public IPv4Private IPv4Security GroupsUse as Bastion Host?
+SubnetSecurity Groups & NACLs
+Network Access Control List (NACL)
+NACLs
+Default NACL
+ResponseEphemeral Ports
+NACL with Ephemeral PortsVPC
+Create NACL rules for each target subnets CIDRVPC
+Security Group vs. NACLsSecurity GroupNACLOperates at the instance levelOperates at the subnet levelSupports allow rules onlySupports allow rules and deny rulesStateful: return traffic is automatically allowed, regardless of any rulesStateless: return traffic must be explicitly allowed by rules(think of ephemeral ports)All rules are evaluated before deciding whether to allow trafficRules are evaluated in order (lowest to highest) when deciding whether to allow traffic, first match winsApplies to an EC2 instance when specified by someoneAutomatically applies to all EC2 instances in the subnet that it’s associated withNACL Examples: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html
+VPC Peering
+VPC Peering –Good to know
+VPC Peering
+VPC Endpoints
+VPC Endpoints (AWS PrivateLink)
+Private SubnetTypes of Endpoints
+Gateway or Interface Endpoint for S3?
+
+VPC Flow Logs
+VPC Flow Logs
+VPC Flow Logs Syntax
+VPC Flow Logs –Troubleshoot SG & NACL issues
+VPC Flow Logs –Architectures
+AWS Site-to-Site VPN
+AWS Site-to-Site VPN
+Private SubnetSite-to-Site VPN Connections
+AWS VPN CloudHub
+Direct Connect (DX)
+Direct Connect Diagram
+Direct Connect Gateway
+Direct Connect –Connection Types
+Direct Connect –Encryption 
+Direct Connect -ResiliencyHigh Resiliency for Critical Workloads
+Site-to-Site VPN connection as a backup
+Network topologies can become complicated
+Transit Gateway
+Transit Gateway: Site-to-Site VPN ECMP
+Transit Gateway: throughput with ECMPVPN to virtual private gateway
+Transit Gateway –Share Direct Connect between multiple accounts
+VPC –Traffic Mirroring 
+What is IPv6?
+IPv6 in VPC
+IPv6 Troubleshooting
+Egress-only Internet Gateway
+Private Subnet(IPv4: 10.0.1.0/24)(IPv6: 2001:db8:1234:1a02::/64)Public Subnet(IPv4: 10.0.0.0/24)(IPv6: 2001:db8:1234:1a00::/64)IPv6 RoutingRegion
+VPC Section Summary (1/3)
+VPC Section Summary (2/3)
+VPC Section Summary (3/3)
+Networking Costs in AWS per GB -SimplifiedRegion
+Minimizing egress traffic network cost
+S3 Data Transfer Pricing –Analysis for USA
+Private subnet 2(10.0.1.0/24)Public subnetPricing: NAT Gateway vs Gateway VPC EndpointRegion(us-east-1)
+Network Protection on AWS 
+AWS Network Firewall
+Network Firewall –Fine Grained Controls
+Disaster Recovery & Migrations
+Disaster Recovery Overview
+RPO and RTO
+Disaster Recovery Strategies
+Backup and Restore (High RPO)Corporate data center
+Disaster Recovery –Pilot Light
+Warm Standby
+Multi Site / Hot Site Approach
+All AWS Multi RegionAWS Cloud
+Disaster Recovery Tips
+DMS –Database Migration Service
+DMS Sources and TargetsSOURCES:
+AWS Schema Conversion Tool (SCT)
+DMS -Continuous ReplicationCorporate data center
+RDS & Aurora MySQL Migrations
+RDS & Aurora PostgreSQL Migrations
+On-Premise strategy with AWS
+AWS Backup
+AWS Backup
+AWS Backup
+AWS Backup Vault Lock
+AWS Application Discovery Service
+AWS Application Migration Service (MGN)
+
+Transferring large amount of data into AWS
+Extra Solution Architecture discussions
+Lambda, SNS & SQS
+Fan Out Pattern: deliver to multiple SQS
+S3 Event Notifications
+S3 Event Notifications with Amazon EventBridge
+Amazon EventBridge –Intercept API Calls
+API Gateway –AWS Service IntegrationKinesis Data Streams example
+Caching Strategies
+Blocking an IP address
+Blocking an IP address –with an ALB
+Blocking an IP address –with an NLB
+Blocking an IP address –ALB + WAF
+Blocking an IP address –ALB, CloudFront WAF
+High Performance Computing (HPC)
+Data Management & Transfer 
+Compute and Networking
+Compute and Networking
+Storage
+Automation and Orchestration
+Creating a highly available EC2 instance
+Creating a highly available EC2 instanceWith an Auto Scaling Group
+Creating a highly available EC2 instanceWith ASG + EBS
+Other ServicesOverview of Services that might come up in a few questions
+What is CloudFormation
+Benefits of AWS CloudFormation (1/2)
+Benefits of AWS CloudFormation (2/2)
+CloudFormation Stack Designer
+Amazon Simple Email Service (Amazon SES)
+AmazonPinpoint
+Systems Manager –SSM Session Manager
+Systems Manager –Run Command
+Systems Manager –Patch Manager
+Systems Manager –Maintenance Windows
+Systems Manager-Automation
+Cost Explorer
+Cost Explorer –Monthly Cost by AWS Service
+Cost Explorer–Hourly & Resource Level
+Cost Explorer –Savings PlanAlternative to Reserved Instances
+Cost Explorer –Forecast Usage
+Amazon Elastic Transcoder
+AWS Batch
+AWS Batch –Simplified Example
+Batch vs Lambda
+Amazon AppFlow
+White Papers and ArchitecturesWell Architected Framework, Disaster Recover y, etc…
+Section Overview
+Well Architected Framework General Guiding Principles
+Well Architected Framework 6 Pillars
+AWS Well-Architected T ool
+Tr usted Advisor
+Tr usted Advisor Checks Examples
+More Architecture Examples
+Exam Review & Tips
+State of learning checkpoint
+Practice makes perfect
+Proceed by elimination
+Skim the AWS Whitepapers
+Read each service’s FAQ
+Get into the AWS Community
+How will the exam work?
+Congratulations!
+Congratulations!
